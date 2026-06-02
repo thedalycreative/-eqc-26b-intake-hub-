@@ -55,10 +55,10 @@ a:hover { color: #7983f5; text-decoration: underline; }
    ============================================================ */
 .topnav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(43, 45, 49, 0.92);
+  background: rgba(88, 101, 242, 0.92);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid var(--dc-border);
+  border-bottom: 1px solid var(--dc-blurple-2);
 }
 .topnav-inner {
   max-width: var(--max-w);
@@ -77,27 +77,27 @@ a:hover { color: #7983f5; text-decoration: underline; }
   display: flex; flex-direction: column; line-height: 1.1;
 }
 .topnav-brand-text .t1 {
-  color: var(--dc-white); font-weight: 800; font-size: 15px; letter-spacing: -0.3px;
+  color: #fff; font-weight: 800; font-size: 15px; letter-spacing: -0.3px;
 }
 .topnav-brand-text .t2 {
-  color: var(--dc-muted); font-size: 10px; letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.7); font-size: 10px; letter-spacing: 1.5px;
   font-family: ui-monospace, 'SF Mono', Menlo, monospace;
 }
 .topnav-links {
   display: flex; align-items: center; gap: 4px;
 }
 .topnav-link {
-  color: var(--dc-light); font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500;
   padding: 8px 14px; border-radius: var(--radius);
   display: inline-flex; align-items: center; gap: 6px;
   transition: all 0.15s;
 }
 .topnav-link:hover {
-  background: var(--dc-bg3); color: var(--dc-white); text-decoration: none;
+  background: rgba(255,255,255,0.15); color: #fff; text-decoration: none;
 }
 .topnav-link.active {
-  background: rgba(88, 101, 242, 0.15);
-  color: var(--dc-white);
+  background: rgba(255,255,255,0.2);
+  color: #fff;
 }
 .topnav-link i { font-size: 16px; }
 

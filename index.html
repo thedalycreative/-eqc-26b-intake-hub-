@@ -1170,10 +1170,10 @@ a:hover { color: #7983f5; text-decoration: underline; }
    ============================================================ */
 .topnav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(43, 45, 49, 0.92);
+  background: rgba(88, 101, 242, 0.92);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid var(--dc-border);
+  border-bottom: 1px solid var(--dc-blurple-dark);
 }
 .topnav-inner {
   max-width: 1200px;
@@ -1187,13 +1187,13 @@ a:hover { color: #7983f5; text-decoration: underline; }
 .topnav-brand img { height: 40px; width: auto; }
 .topnav-links { display: flex; align-items: center; gap: 4px; }
 .topnav-link {
-  color: var(--dc-light); font-size: 14px; font-weight: 500;
+  color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500;
   padding: 8px 14px; border-radius: var(--radius);
   display: inline-flex; align-items: center; gap: 6px;
   transition: all 0.15s;
 }
-.topnav-link:hover { background: var(--dc-bg3); color: var(--dc-white); text-decoration: none; }
-.topnav-link.active { background: rgba(88, 101, 242, 0.15); color: var(--dc-white); }
+.topnav-link:hover { background: rgba(255,255,255,0.15); color: #fff; text-decoration: none; }
+.topnav-link.active { background: rgba(255,255,255,0.2); color: #fff; }
 .topnav-link i { font-size: 16px; }
 @media (max-width: 720px) {
   .topnav-link { padding: 8px 10px; font-size: 13px; }
@@ -1228,32 +1228,16 @@ a:hover { color: #7983f5; text-decoration: underline; }
 </nav>
 
 <!-- ============================================================
-     HEADER
-     ============================================================ -->
-<header class="header">
-  <div class="header-inner">
-    <img src="assets/logos-icons/Dark%20Variation.png" alt="Intake 26B · Absolute Web Dev Legends"
-         class="hero-logo" width="420" height="420">
-    <h1>26b <span>Class Hub</span></h1>
-    <p class="subtitle">Front End Web Development &middot; Subjects 1 &amp; 2 &middot; Equinim College</p>
-    <div class="intake-info">
-      <span class="dot"></span>
-      Intake 26b &middot; Started 23 March 2026 &middot; 12 Weeks
-    </div>
-  </div>
-</header>
-
-<!-- ============================================================
      PROGRESS BAR
      ============================================================ -->
 <section class="progress-section">
   <div class="progress-inner">
     <div class="progress-label">
       <span>Course Progress</span>
-      <strong id="progressText">Week 9 of 12</strong>
+      <strong id="progressText">Week 10 of 12</strong>
     </div>
     <div class="progress-bar-bg">
-      <div class="progress-bar-fill" id="progressFill" style="width: 75%"></div>
+      <div class="progress-bar-fill" id="progressFill" style="width: 83%"></div>
     </div>
   </div>
 </section>
@@ -1362,9 +1346,9 @@ a:hover { color: #7983f5; text-decoration: underline; }
       <h3>When &amp; Where We Meet</h3>
     </div>
     <div class="sched-row">
-      <div class="sched-pill"><span class="day">Mon</span> <strong>9:30am&ndash;2pm</strong></div>
-      <div class="sched-pill"><span class="day">Wed</span> <strong>9:30am&ndash;2pm</strong></div>
-      <div class="sched-pill"><span class="day">Thu</span> <strong>9:30am&ndash;2pm</strong></div>
+      <div class="sched-pill"><span class="day">Mon</span> <strong>9am&ndash;2pm</strong></div>
+      <div class="sched-pill"><span class="day">Wed</span> <strong>9am&ndash;2pm</strong></div>
+      <div class="sched-pill"><span class="day">Thu</span> <strong>9am&ndash;2pm</strong></div>
     </div>
     <div class="sched-meta">
       <span><i class="bi bi-geo-alt-fill"></i> EQC West Perth</span>
@@ -1991,14 +1975,14 @@ a:hover { color: #7983f5; text-decoration: underline; }
 </div>
 
 <!-- ===================== WEEK 9 ===================== -->
-<div class="week-card current open" data-week="9">
+<div class="week-card completed" data-week="9">
   <div class="week-header" onclick="toggleWeek(this)">
     <div class="week-title">
       <span class="week-num">Week 9</span>
       <span class="week-dates">Prototype &amp; Build <span class="date-range">25 - 28 May</span></span>
     </div>
     <div class="week-status">
-      <span class="status-pill now"><i class="bi bi-arrow-right-circle-fill"></i> Now</span>
+      <span class="status-pill done"><i class="bi bi-check-circle-fill"></i> Done</span>
       <i class="bi bi-chevron-down week-toggle"></i>
     </div>
   </div>
@@ -2065,14 +2049,14 @@ a:hover { color: #7983f5; text-decoration: underline; }
 </div>
 
 <!-- ===================== WEEK 10 ===================== -->
-<div class="week-card upcoming" data-week="10">
+<div class="week-card current open" data-week="10">
   <div class="week-header" onclick="toggleWeek(this)">
     <div class="week-title">
       <span class="week-num">Week 10</span>
-      <span class="week-dates">Build Website <span class="date-range">1 - 4 Jun</span></span>
+      <span class="week-dates">Lead &amp; Facilitate · Meet Mark <span class="date-range">1 - 4 Jun</span></span>
     </div>
     <div class="week-status">
-      <span class="status-pill soon">Upcoming</span>
+      <span class="status-pill now"><i class="bi bi-arrow-right-circle-fill"></i> Now</span>
       <i class="bi bi-chevron-down week-toggle"></i>
     </div>
   </div>
@@ -2088,11 +2072,15 @@ a:hover { color: #7983f5; text-decoration: underline; }
           <span class="class-num">Class 19</span>
           <span class="class-day">Wed 3 Jun</span>
         </div>
-        <div class="class-topic">Build Website <span class="subject-tag s2">S2</span></div>
-        <div class="class-desc">Continue building. Focus on responsive design and layout.</div>
-        <div class="badges"></div>
+        <div class="class-topic">Lead &amp; Facilitate a Team · Meet Mark <span class="subject-tag s1">S1</span></div>
+        <div class="class-desc">Merge class with the rest of campus &mdash; complete the Lead &amp; Facilitate a Team unit and meet Mark, your new trainer from next week.</div>
+        <ul class="talking-points">
+          <li>Cross-cohort session with the wider campus</li>
+          <li>Wrap up the Lead &amp; Facilitate a Team assessment (S1)</li>
+          <li>Intro to Mark &mdash; handover and what to expect next week onward</li>
+        </ul>
         <div class="badges-info">
-          <span class="badge hub"><i class="bi bi-collection"></i> Activity S02 &ndash; Step 3</span>
+          <span class="badge hub"><i class="bi bi-collection"></i> Lead &amp; Facilitate a Team &ndash; Final</span>
         </div>
       </div>
 
@@ -2101,11 +2089,15 @@ a:hover { color: #7983f5; text-decoration: underline; }
           <span class="class-num">Class 20</span>
           <span class="class-day">Thu 4 Jun</span>
         </div>
-        <div class="class-topic">Build Website <span class="subject-tag s2">S2</span></div>
-        <div class="class-desc">Continue building. Polish and refine.</div>
-        <div class="badges"></div>
+        <div class="class-topic">Build Website · Tim&rsquo;s Last Day <span class="subject-tag s2">S2</span></div>
+        <div class="class-desc">Final class with Tim &mdash; build time, questions, and farewell. Mark takes over from Week 11.</div>
+        <ul class="talking-points">
+          <li>Open build session &mdash; bring questions on your project</li>
+          <li>Last chance to grab feedback from Tim before handover</li>
+          <li>Mark joins from Week 11 onward</li>
+        </ul>
         <div class="badges-info">
-          <span class="badge hub"><i class="bi bi-collection"></i> Activity S02 &ndash; Step 3 cont.</span>
+          <span class="badge hub"><i class="bi bi-collection"></i> Activity S02 &ndash; Build</span>
         </div>
       </div>
 
@@ -2133,11 +2125,19 @@ a:hover { color: #7983f5; text-decoration: underline; }
           <span class="class-num">Class 21</span>
           <span class="class-day">Mon 8 Jun</span>
         </div>
-        <div class="class-topic">Build Website <span class="subject-tag s2">S2</span></div>
-        <div class="class-desc">Final build sessions. Make sure all pages are working.</div>
-        <div class="badges"></div>
+        <div class="class-topic">Build Website · Welcome Mark <span class="subject-tag s2">S2</span></div>
+        <div class="class-desc">Mark&rsquo;s first class with the cohort &mdash; keep building your website toward a complete first pass across every page.</div>
+        <ul class="talking-points">
+          <li>Quick intros with Mark &mdash; current builds, blockers and goals</li>
+          <li>Push every page to a working first pass (no dead links, no lorem ipsum)</li>
+          <li>Tighten navigation &amp; footer consistency across pages</li>
+        </ul>
+        <div class="badges">
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="resources.html#templates" target="_blank">Templates</a></span>
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://getbootstrap.com/docs/5.3/examples/" target="_blank" rel="noopener">Bootstrap Examples</a></span>
+        </div>
         <div class="badges-info">
-          <span class="badge hub"><i class="bi bi-collection"></i> Activity S02 &ndash; Step 4 (Submit)</span>
+          <span class="badge hub"><i class="bi bi-collection"></i> Activity S02 &ndash; Step 4</span>
         </div>
       </div>
 
@@ -2147,10 +2147,16 @@ a:hover { color: #7983f5; text-decoration: underline; }
           <span class="class-day">Wed 10 Jun</span>
         </div>
         <div class="class-topic">Review &amp; Test <span class="subject-tag s2">S2</span></div>
-        <div class="class-desc">Step 5: Review and test your website. Cross-browser, responsive, accessibility checks.</div>
+        <div class="class-desc">Discovery pass &mdash; find every issue you&rsquo;ll fix next week. Validate, audit and stress-test the build.</div>
+        <ul class="talking-points">
+          <li>Cross-browser smoke test &mdash; Chrome, Firefox, Safari + mobile width</li>
+          <li>First validator pass &mdash; log every HTML &amp; CSS error you find</li>
+          <li>WAVE accessibility scan &mdash; capture issues to fix in Class 23</li>
+        </ul>
         <div class="badges">
-          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://validator.w3.org" target="_blank">W3C Validator</a></span>
-          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://wave.webaim.org" target="_blank">WAVE Accessibility</a></span>
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://validator.w3.org" target="_blank" rel="noopener">W3C Validator</a></span>
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://wave.webaim.org" target="_blank" rel="noopener">WAVE Accessibility</a></span>
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a></span>
         </div>
         <div class="badges-info">
           <span class="badge hub"><i class="bi bi-collection"></i> Activity S02 &ndash; Step 5</span>
@@ -2186,11 +2192,19 @@ a:hover { color: #7983f5; text-decoration: underline; }
           <span class="class-num">Class 23</span>
           <span class="class-day">Mon 15 Jun</span>
         </div>
-        <div class="class-topic">Lead &amp; Facilitate a Team <span class="subject-tag s1">S1</span></div>
-        <div class="class-desc">Team leadership, collaboration, giving and receiving feedback.</div>
-        <div class="badges"></div>
+        <div class="class-topic">Final Polish &amp; Submission Prep <span class="subject-tag s2">S2</span></div>
+        <div class="class-desc">Last build day before submission &mdash; validate, audit accessibility, and make sure your site is ready to ship on Wednesday.</div>
+        <ul class="talking-points">
+          <li>Run W3C HTML &amp; CSS validators, fix any errors</li>
+          <li>Accessibility audit with WAVE + a manual keyboard test</li>
+          <li>Final content sweep &mdash; copy, images, links, meta tags</li>
+        </ul>
+        <div class="badges">
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validator</a></span>
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://wave.webaim.org/" target="_blank" rel="noopener">WAVE Accessibility</a></span>
+        </div>
         <div class="badges-info">
-          <span class="badge hub"><i class="bi bi-collection"></i> Activity S01 Mod 3</span>
+          <span class="badge hub"><i class="bi bi-collection"></i> Pre-Submission Check</span>
         </div>
       </div>
 
@@ -2199,9 +2213,16 @@ a:hover { color: #7983f5; text-decoration: underline; }
           <span class="class-num">Class 24</span>
           <span class="class-day">Wed 17 Jun</span>
         </div>
-        <div class="class-topic">Submission &amp; Feedback <span class="subject-tag s1">S1</span><span class="subject-tag s2">S2</span></div>
-        <div class="class-desc">Submit your final website. Peer review and trainer feedback session.</div>
-        <div class="badges"></div>
+        <div class="class-topic">Submission &amp; Show &amp; Tell <span class="subject-tag s2">S2</span></div>
+        <div class="class-desc">Submit your final website and walk the cohort through what you built &mdash; the last formal class of the course.</div>
+        <ul class="talking-points">
+          <li>Upload to the HUB and confirm receipt</li>
+          <li>Show &amp; tell &mdash; a short walk-through of your site to the cohort</li>
+          <li>Peer review + final trainer feedback round with Mark</li>
+        </ul>
+        <div class="badges">
+          <span class="badge link"><i class="bi bi-box-arrow-up-right"></i> <a href="https://hub.equinimcollege.com" target="_blank" rel="noopener">Equinim HUB</a></span>
+        </div>
         <div class="badges-info">
           <span class="badge hub"><i class="bi bi-collection"></i> Final Submission</span>
         </div>
