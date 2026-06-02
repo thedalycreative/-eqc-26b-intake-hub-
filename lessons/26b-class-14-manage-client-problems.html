@@ -137,11 +137,13 @@
         }
 
         footer {
-            background: #212529;
-            color: white;
+            background: #5865f2;
+            color: rgba(255,255,255,0.85);
+            border-top: 1px solid #4752c4;
             padding: 30px 0;
             margin-top: 60px;
         }
+        footer a { color: #fff; }
 
         footer h6 {
             color: var(--primary-color);
@@ -225,6 +227,81 @@
     .hub-floatnav a.hub-floatnav__link { padding: 6px 8px; }
   }
   @media print { .hub-floatnav { display: none; } }
+</style>
+<style>
+  /* === Canonical site footer === */
+  .footer {
+    background: #5865f2;
+    color: rgba(255,255,255,0.92);
+    padding: 48px 24px 24px;
+    margin-top: 60px;
+    border-top: 1px solid #4752c4;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .footer * { box-sizing: border-box; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.3fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 32px;
+  }
+  .footer-col h5 {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 14px;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; }
+  .footer-col li {
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.85);
+    font-size: 13.5px;
+  }
+  .footer .brand-name {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .footer .brand-tag {
+    margin: 0 0 6px;
+    color: rgba(255,255,255,0.85);
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .footer .brand-meta {
+    margin: 8px 0 0;
+    color: rgba(255,255,255,0.7);
+    font-size: 12.5px;
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    transition: border-color .15s;
+  }
+  .footer a:hover { color: #fff; border-bottom-color: #fff; }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    text-align: center;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.75);
+  }
+  .footer-bottom .sep { color: rgba(255,255,255,0.5); margin: 0 10px; }
+  @media (max-width: 820px) { .footer-cols { grid-template-columns: 1fr 1fr; gap: 28px; } }
+  @media (max-width: 520px) { .footer-cols { grid-template-columns: 1fr; gap: 24px; } }
+  @media print { .footer { display: none; } }
 </style>
 </head>
 
@@ -490,22 +567,48 @@ Best regards, [Your Name]</div>
     </div>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h6><i class="bi bi-mortarboard-fill me-2"></i>Module Information</h6>
-                    <p class="mb-1"><strong>Qualification:</strong> ICT50220 Diploma of Information Technology</p>
-                    <p class="mb-1"><strong>Subject:</strong> Working with Clients and Industry</p>
-                    <p class="mb-1"><strong>Module:</strong> Manage Client Problems</p>
-                    <p class="mb-0"><strong>Activity:</strong> Katie (Part A) & Marvin (Part B)</p>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <p class="mb-0 text-white-50 small mt-3">© 2025 Equinim College</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col footer-brand">
+        <strong class="brand-name">26B Class Hub</strong>
+        <p class="brand-tag">Front-end web development &middot; 12 weeks &middot; 24 classes for Intake 26B.</p>
+        <p class="brand-meta">EQC Institute of Technology &middot; Perth CBD campus</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="../index.html">Hub home</a></li>
+          <li><a href="../lessons">Lessons archive</a></li>
+          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Course</h5>
+        <ul>
+          <li>ICT50220 &middot; Diploma of IT</li>
+          <li>Subject 1 &middot; Professional Skills</li>
+          <li>Subject 2 &middot; Technical Build</li>
+          <li>Term: Mar – Jun 2026</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>Tim Daly &middot; Trainer</li>
+          <li><a href="mailto:tim.daly@equinim.edu.au">tim.daly@equinim.edu.au</a></li>
+          <li><a href="https://github.com/thedalycreative/eqc-26b-classhub" target="_blank" rel="noopener">GitHub repo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Equinim College &middot; RTO 45758</span>
+      <span class="sep">&middot;</span>
+      <span>Built with &hearts; by Tim Daly</span>
+    </div>
+  </div>
+</footer>
 
     <!-- Floating Back to Top Button -->
     <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">

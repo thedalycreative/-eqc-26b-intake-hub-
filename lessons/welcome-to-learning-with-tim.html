@@ -188,9 +188,10 @@
   .sig{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:34px;color:var(--teal-deep)}
   .sig-role{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
 
-  footer{border-top:2px solid var(--ink);margin-top:30px;padding:24px 0 50px;text-align:center}
-  footer p{font-size:12.5px;color:var(--ink-soft);letter-spacing:.04em}
-  footer b{color:var(--orange-deep)}
+  footer{border-top:1px solid #4752c4;margin-top:30px;padding:24px 0 50px;text-align:center;background:#5865f2;color:rgba(255,255,255,0.85)}
+  footer p{font-size:12.5px;color:rgba(255,255,255,0.85);letter-spacing:.04em}
+  footer b{color:#fff}
+  footer a{color:#fff}
 
   /* ---------- ANIMATIONS ---------- */
   @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
@@ -241,6 +242,81 @@
     .hub-floatnav a.hub-floatnav__link { padding: 6px 8px; }
   }
   @media print { .hub-floatnav { display: none; } }
+</style>
+<style>
+  /* === Canonical site footer === */
+  .footer {
+    background: #5865f2;
+    color: rgba(255,255,255,0.92);
+    padding: 48px 24px 24px;
+    margin-top: 60px;
+    border-top: 1px solid #4752c4;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .footer * { box-sizing: border-box; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.3fr 1.2fr;
+    gap: 40px;
+    margin-bottom: 32px;
+  }
+  .footer-col h5 {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 14px;
+    font-weight: 600;
+    font-family: inherit;
+  }
+  .footer-col ul { list-style: none; padding: 0; margin: 0; }
+  .footer-col li {
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.85);
+    font-size: 13.5px;
+  }
+  .footer .brand-name {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .footer .brand-tag {
+    margin: 0 0 6px;
+    color: rgba(255,255,255,0.85);
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .footer .brand-meta {
+    margin: 8px 0 0;
+    color: rgba(255,255,255,0.7);
+    font-size: 12.5px;
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    transition: border-color .15s;
+  }
+  .footer a:hover { color: #fff; border-bottom-color: #fff; }
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    text-align: center;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.75);
+  }
+  .footer-bottom .sep { color: rgba(255,255,255,0.5); margin: 0 10px; }
+  @media (max-width: 820px) { .footer-cols { grid-template-columns: 1fr 1fr; gap: 28px; } }
+  @media (max-width: 520px) { .footer-cols { grid-template-columns: 1fr; gap: 24px; } }
+  @media print { .footer { display: none; } }
 </style>
 </head>
 <body>
@@ -389,8 +465,47 @@
 
 </div>
 
-<footer>
-  <div class="wrap"><p>Welcome to <b>Learning with Tim</b> · EQC Institute of Technology · Perth, WA</p></div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-cols">
+      <div class="footer-col footer-brand">
+        <strong class="brand-name">26B Class Hub</strong>
+        <p class="brand-tag">Front-end web development &middot; 12 weeks &middot; 24 classes for Intake 26B.</p>
+        <p class="brand-meta">EQC Institute of Technology &middot; Perth CBD campus</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="../index.html">Hub home</a></li>
+          <li><a href="../lessons">Lessons archive</a></li>
+          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../downloads.html">Downloads</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Course</h5>
+        <ul>
+          <li>ICT50220 &middot; Diploma of IT</li>
+          <li>Subject 1 &middot; Professional Skills</li>
+          <li>Subject 2 &middot; Technical Build</li>
+          <li>Term: Mar – Jun 2026</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li>Tim Daly &middot; Trainer</li>
+          <li><a href="mailto:tim.daly@equinim.edu.au">tim.daly@equinim.edu.au</a></li>
+          <li><a href="https://github.com/thedalycreative/eqc-26b-classhub" target="_blank" rel="noopener">GitHub repo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Equinim College &middot; RTO 45758</span>
+      <span class="sep">&middot;</span>
+      <span>Built with &hearts; by Tim Daly</span>
+    </div>
+  </div>
 </footer>
 
 <script>
