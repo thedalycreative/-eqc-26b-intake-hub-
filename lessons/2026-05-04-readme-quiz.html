@@ -141,6 +141,50 @@
 
   .progress-label .count { color: var(--accent); font-weight: 700; }
 
+  /* ROUND DIVIDER */
+  .round-divider {
+    margin: 56px 0 28px;
+    padding: 24px 28px;
+    background: linear-gradient(135deg, rgba(47, 158, 160, 0.10), rgba(255, 138, 61, 0.04));
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--teal);
+    border-radius: 12px;
+  }
+
+  .round-divider:first-of-type { margin-top: 16px; }
+
+  .round-divider .round-tag {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--teal);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .round-divider h2 {
+    font-family: 'Fraunces';
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .round-divider .round-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .round-divider { padding: 20px 22px; margin: 40px 0 20px; }
+    .round-divider h2 { font-size: 26px; }
+  }
+
   /* QUESTIONS */
   .question {
     background: var(--panel);
@@ -493,16 +537,20 @@
 
   <!-- HERO -->
   <section class="hero">
-    <span class="tag">Lesson 01 · Self-Check</span>
+    <span class="tag">Lesson 01 · Quiz Night</span>
     <h1>The <span class="accent">README</span><br>Quiz</h1>
-    <p class="lead">15 questions. Click to reveal. Test what you've learned about README files — no scoring, just honest self-checking.</p>
+    <p class="lead">30 questions across 4 rounds. Click to reveal. Round 1 is the lesson content — Rounds 2–4 are general knowledge to keep things spicy. No scoring, just honest self-checking.</p>
     <div class="stats-row">
       <div class="stat">
-        <div class="num">15</div>
+        <div class="num">30</div>
         <div class="label">Questions</div>
       </div>
       <div class="stat">
-        <div class="num">~10</div>
+        <div class="num">4</div>
+        <div class="label">Rounds</div>
+      </div>
+      <div class="stat">
+        <div class="num">~20</div>
         <div class="label">Minutes</div>
       </div>
       <div class="stat">
@@ -519,12 +567,19 @@
     </div>
     <div class="progress-label">
       <span>Progress</span>
-      <span><span class="count" id="progressNum">0</span> / 15</span>
+      <span><span class="count" id="progressNum">0</span> / 30</span>
     </div>
   </div>
 
   <!-- QUESTIONS -->
   <div id="quiz">
+
+    <!-- ===== ROUND 1: README & Markdown ===== -->
+    <div class="round-divider">
+      <div class="round-tag">Round 01 · The Lesson</div>
+      <h2>README &amp; Markdown</h2>
+      <p class="round-desc">15 questions on what we covered in the deck. If you can answer these, the lesson stuck.</p>
+    </div>
 
     <div class="question" data-id="1">
       <div class="q-header" onclick="toggle(1)">
@@ -766,6 +821,257 @@
       </div>
     </div>
 
+    <!-- ===== ROUND 2: Web & Tech Trivia ===== -->
+    <div class="round-divider">
+      <div class="round-tag">Round 02 · Warm-Up</div>
+      <h2>Web &amp; Tech Trivia</h2>
+      <p class="round-desc">A bit of history about the world that made the web. Five questions to stretch your brain in a different direction.</p>
+    </div>
+
+    <div class="question" data-id="16">
+      <div class="q-header" onclick="toggle(16)">
+        <div class="q-num">16</div>
+        <div class="q-text">Who is credited with inventing the World Wide Web — and at which European research lab?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>Sir Tim Berners-Lee</strong>, working at <strong>CERN</strong> (the European Organisation for Nuclear Research) in Switzerland.</p>
+          <p>He wrote the original proposal in <strong>1989</strong>, and the first website went live in <strong>1991</strong>.</p>
+          <div class="nugget">💡 The original purpose? Helping CERN physicists share research documents. Not exactly cat videos.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="17">
+      <div class="q-header" onclick="toggle(17)">
+        <div class="q-num">17</div>
+        <div class="q-text">What does <code style="background: #0a0d12; padding: 2px 8px; border-radius: 4px; color: var(--accent); font-size: 15px;">HTTP</code> stand for?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>HyperText Transfer Protocol.</strong></p>
+          <p>It's the language browsers and servers use to talk to each other. The <strong>S</strong> in <code>HTTPS</code> stands for <em>Secure</em> — the same protocol, encrypted.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="18">
+      <div class="q-header" onclick="toggle(18)">
+        <div class="q-num">18</div>
+        <div class="q-text">What was Google originally called when it was a Stanford research project in 1996?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>BackRub.</strong> Named for its method of analysing the web's <em>back-links</em> — which pages link to which — to rank importance.</p>
+          <p>Larry Page and Sergey Brin renamed it <strong>Google</strong> in 1997, a play on <em>googol</em> (the number 1 followed by 100 zeros).</p>
+          <div class="nugget">💡 "BackRub.com" would have been a very different brand.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="19">
+      <div class="q-header" onclick="toggle(19)">
+        <div class="q-num">19</div>
+        <div class="q-text">Which 1993 web browser was the first to display images <em>inline</em> with text — popularising the visual web?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>NCSA Mosaic</strong>, developed at the University of Illinois.</p>
+          <p>Before Mosaic, images had to open in a separate window. Mosaic's team went on to create <strong>Netscape Navigator</strong>, which dominated the 1990s browser wars.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="20">
+      <div class="q-header" onclick="toggle(20)">
+        <div class="q-num">20</div>
+        <div class="q-text">In a URL like <code style="background: #0a0d12; padding: 2px 8px; border-radius: 4px; color: var(--accent); font-size: 15px;">https://example.com/path</code>, what is the part before the colon called?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p>The <strong>scheme</strong> (sometimes called the <em>protocol</em>).</p>
+          <p>Common schemes: <code>https</code>, <code>http</code>, <code>mailto</code>, <code>ftp</code>, <code>file</code>. The scheme tells your browser <em>how</em> to fetch what comes after.</p>
+          <div class="nugget">💡 The full anatomy: scheme :// host / path ? query # fragment</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ROUND 3: General Knowledge ===== -->
+    <div class="round-divider">
+      <div class="round-tag">Round 03 · Mixed Bag</div>
+      <h2>General Knowledge</h2>
+      <p class="round-desc">A bit of everything. Pub-quiz classics — geography, science, art, and one for the animal lovers.</p>
+    </div>
+
+    <div class="question" data-id="21">
+      <div class="q-header" onclick="toggle(21)">
+        <div class="q-num">21</div>
+        <div class="q-text">How many bones are in the adult human body?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>206.</strong></p>
+          <p>Babies are born with around <strong>270</strong> — many fuse together as we grow. More than half of all your bones live in your hands and feet.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="22">
+      <div class="q-header" onclick="toggle(22)">
+        <div class="q-num">22</div>
+        <div class="q-text">What is the largest planet in our solar system?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>Jupiter.</strong> Big enough to fit every other planet inside it — twice over.</p>
+          <p>Its Great Red Spot is a storm wider than Earth, and it's been raging for at least 350 years.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="23">
+      <div class="q-header" onclick="toggle(23)">
+        <div class="q-num">23</div>
+        <div class="q-text">Who painted the Mona Lisa?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>Leonardo da Vinci</strong>, between roughly 1503 and 1519.</p>
+          <p>It lives in the Louvre in Paris, behind bulletproof glass. The painting is surprisingly small — about 77 cm tall.</p>
+          <div class="nugget">💡 It only became globally famous after being <em>stolen</em> in 1911 — and the press coverage made it the world's most recognisable painting.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="24">
+      <div class="q-header" onclick="toggle(24)">
+        <div class="q-num">24</div>
+        <div class="q-text">What is the chemical symbol for gold?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><code>Au</code> — from the Latin <em>aurum</em>, meaning "shining dawn."</p>
+          <p>Many element symbols come from Latin names: <strong>Fe</strong> for iron (<em>ferrum</em>), <strong>Pb</strong> for lead (<em>plumbum</em>), <strong>Na</strong> for sodium (<em>natrium</em>).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="25">
+      <div class="q-header" onclick="toggle(25)">
+        <div class="q-num">25</div>
+        <div class="q-text">What is the only mammal capable of true, sustained flight?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>The bat.</strong> Flying squirrels and sugar gliders only <em>glide</em> — bats actually fly, with powered, flapping wings.</p>
+          <p>There are over 1,400 species, making up roughly a fifth of all mammal species on Earth.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ROUND 4: Australia & Perth ===== -->
+    <div class="round-divider">
+      <div class="round-tag">Round 04 · Local Legends</div>
+      <h2>Australia &amp; Perth</h2>
+      <p class="round-desc">Home turf. Five questions about the country you're sitting in and the city you're sitting in right now.</p>
+    </div>
+
+    <div class="question" data-id="26">
+      <div class="q-header" onclick="toggle(26)">
+        <div class="q-num">26</div>
+        <div class="q-text">What is the name of the river that runs through the centre of Perth?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>The Swan River.</strong> Named in 1697 by Dutch explorer Willem de Vlamingh, after the black swans he saw on it — the first Europeans had ever seen.</p>
+          <p>The Whadjuk Noongar name is <strong>Derbarl Yerrigan</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="27">
+      <div class="q-header" onclick="toggle(27)">
+        <div class="q-num">27</div>
+        <div class="q-text">In what year did Australia federate to become a single nation?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>1 January 1901.</strong> The six colonies — including Western Australia — joined to form the Commonwealth of Australia.</p>
+          <p>WA was the last to vote yes, joining only after a referendum the year before.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="28">
+      <div class="q-header" onclick="toggle(28)">
+        <div class="q-num">28</div>
+        <div class="q-text">What is the world's longest fence — built across Australia in the 1880s?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>The Dingo Fence</strong> (also called the Dog Fence). Around <strong>5,614 km long</strong>, stretching from Queensland through NSW into South Australia.</p>
+          <p>It was built to keep dingoes out of fertile sheep grazing country in the south-east. It's roughly twice the length of the Great Wall of China's main run.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="29">
+      <div class="q-header" onclick="toggle(29)">
+        <div class="q-num">29</div>
+        <div class="q-text">Which Perth landmark is a copper-clad bell tower on the Swan River foreshore, opened in 2001?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>The Bell Tower</strong> (sometimes called the Swan Bell Tower).</p>
+          <p>It houses the bells of St Martin-in-the-Fields, London — gifted to WA for Australia's bicentenary in 1988. Some of those bells date back to the 14th century.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="question" data-id="30">
+      <div class="q-header" onclick="toggle(30)">
+        <div class="q-num">30</div>
+        <div class="q-text">What is the time difference between Perth and Sydney during standard (non-daylight-saving) time?</div>
+        <div class="q-toggle">Reveal</div>
+      </div>
+      <div class="q-answer">
+        <div class="q-answer-inner">
+          <div class="answer-label">→ Answer</div>
+          <p><strong>Two hours.</strong> Perth is on AWST (UTC+8), Sydney is on AEST (UTC+10).</p>
+          <p>When the eastern states switch to daylight saving in October, the gap widens to <strong>three hours</strong> — which is why every Perth dev knows to double-check meeting times with the east coast.</p>
+          <div class="nugget">💡 WA voted against daylight saving four separate times. We like our long evenings the way they are.</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- CONTROLS -->
@@ -778,7 +1084,7 @@
   <!-- COMPLETION -->
   <div class="completion" id="completion">
     <h2>Nice work.</h2>
-    <p>You've revealed all 15 answers. Now write a great README for your next project — and remember: write it <em>as you build</em>, not after.</p>
+    <p>You've revealed all 30 answers across 4 rounds. Now write a great README for your next project — and remember: write it <em>as you build</em>, not after. (And if anyone asks who painted the Mona Lisa, you've got that covered too.)</p>
   </div>
 
   <!-- FOOTER -->
@@ -828,7 +1134,7 @@
 </div>
 
 <script>
-  const total = 15;
+  const total = 30;
   const revealed = new Set();
 
   function toggle(id) {
